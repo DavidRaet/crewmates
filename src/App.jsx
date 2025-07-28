@@ -1,36 +1,14 @@
-import { useState } from 'react'
 import './App.css'
 import TeamDashboard from './components/TeamDashboard';
 import Create from './components/Create';
 import About from './components/About';
+import Home from './components/Home';
 import { Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
-  const TEAMS = {
-    'Bastard Munchen': {
-    colors: ['maroon', 'gold'],
-    theme: 'ruthless'
-    },
-    'PxG': {
-      colors: ['blue', 'white'],
-      theme: 'aggressive'
-    },
-    'FC Barcha': {
-      colors: ['red', 'black'],
-      theme: 'creativity'
-    },
-    'Ubers': {
-      colors: ['black', 'white'],
-      theme: 'meticulousness'      
-    },
-    'Manshine City': {
-      colors: ['sky blue', 'white'],
-      theme: 'athleticism'          
-    }
-  }
 
-  const [count, setCount] = useState(0)
+
 
   return (
     <div className="App">
@@ -44,11 +22,10 @@ function App() {
       </nav>
       <main>
         <Routes>
-          
+    <Route path='/' element={<Home />} />
     <Route path='/dashboard' element={<TeamDashboard />} />
     <Route path='/create' element={<Create />} />
     <Route path='/about' element={<About />} />
-  
         </Routes>
       </main>
     </div>
