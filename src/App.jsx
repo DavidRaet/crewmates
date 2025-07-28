@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import {Link} from 'react-router-dom';
 import TeamDashboard from './components/TeamDashboard';
 import Create from './components/Create';
 import About from './components/About';
+import { Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
@@ -42,6 +42,15 @@ function App() {
           <li><Link to='/about'>About</Link></li>
         </ul>
       </nav>
+      <main>
+        <Routes>
+          
+    <Route path='/dashboard' element={<TeamDashboard />} />
+    <Route path='/create' element={<Create />} />
+    <Route path='/about' element={<About />} />
+  
+        </Routes>
+      </main>
     </div>
   )
 }
