@@ -25,4 +25,4 @@ dist-ssr
 .env
 .env.local
 .env.production
-client.js  # Keep this for now
+client.js  
