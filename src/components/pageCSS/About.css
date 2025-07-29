@@ -1,0 +1,29 @@
+.team-badge {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.manager-photo {
+    width: 80px;
+    border: 2px solid #fff;
+    border-radius: 70%;
+}
+
+.team-card {
+    min-height: 400px;
+    height: auto;
+    border: 2px solid #fff;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3 ease;
+}
+
+.teams-grid {
+    display: flex;
+    flex-direction: row;
+}

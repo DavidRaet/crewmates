@@ -1,17 +1,20 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 
 .App {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-  width: 200px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -26,3 +29,11 @@ li {
   padding: 1rem;
 }
 
+
+
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  width: 220px; /* Fixed width */
+
+}

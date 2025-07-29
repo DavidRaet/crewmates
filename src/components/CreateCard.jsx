@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { supabase } from '../client'
 import { useNavigate } from "react-router-dom";
-import './pageCSS/Create.css';
+import './pageCSS/CreateCard.css';
 
 
-const Create = () => {
+const CreateCard = () => {
     const [character, setCharacter] = useState({name: "", number: "", position: "", team: ""});
     const navigate = useNavigate();
 
@@ -75,15 +75,33 @@ const Create = () => {
                 </div>
             <div className="char-team-info">
                 <label htmlFor="position">Position</label>
-                <input type="text" id='position' name='position' onChange={handleChange} />
+                <select name="position" id="position" onChange={handleChange} required>
+                    <option value="">Select a position...</option>
+                    <option value="Striker">Striker</option>
+                    <option value="Midfielder">Midfielder</option>
+                    <option value="Center Back">Center Back</option>
+                    <option value="Goalkeeper">Goalkeeper</option>
+                    <option value="Attacking Midfielder">Attacking Midfielder</option>
+                    <option value="Defensive Midfielder">Defensive Midfielder</option>
+                    <option value="Winger">Winger</option>
+                </select>
                 <label htmlFor="team">Team</label>
-                <input type="text" id='team' name='team' onChange={handleChange} />
+                <select name="team" id="team" onChange={handleChange} required>
+                    <option value="">Select a team...</option>
+                    <option value="Bastard Munchen">Bastard Munchen</option>
+                    <option value="PxG">PxG</option>
+                    <option value="FC Barcha">FC Barcha</option>
+                    <option value="Ubers">Ubers</option>
+                    <option value="Manshine City">Manshine City</option>
+                </select>
             </div>
             <input type="submit" value="Submit" onClick={submitCharacter} />
-
+            <p className="team-hint">
+                📖 Refer to the About section to understand each team's philosophy and find your fit
+            </p>
             </form>
         </div>
     )
 }
 
-export default Create;
+export default CreateCard;

@@ -1,0 +1,140 @@
+.team-dashboard {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.teams {
+   display: flex; 
+   gap: 2rem;
+   align-items: flex-start; /* Changed from center */
+   justify-content: center;
+   flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Individual team column */
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px; /* Minimum width for team columns */
+}
+
+.team h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* FIXED CARD DIMENSIONS */
+.card {
+    width: 180px;          /* Fixed width */
+    height: 250px;         /* Fixed height */
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 3px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes content evenly */
+    position: relative;
+    overflow: hidden;      /* Prevents content overflow */
+    box-sizing: border-box; /* Includes padding in dimensions */
+}
+
+/* Content sections within cards */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.card-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    white-space: nowrap;    /* Prevents name wrapping */
+    overflow: hidden;       /* Hides overflow */
+    text-overflow: ellipsis; /* Adds ... for long names */
+}
+
+.card-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.card-actions {
+    margin-top: auto; /* Pushes to bottom */
+    text-align: center;
+}
+
+.edit-btn {
+    width: 100%;
+    padding: 0.5rem;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.edit-btn:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+
+.bastard-munchen-theme {
+    background: linear-gradient(135deg, maroon 0%, #8B0000 100%);
+    border-color: gold;
+    color: gold;
+}
+
+.pxg-theme {
+    background: linear-gradient(135deg, rgb(25, 49, 160) 0%, #0066CC 100%);
+    border-color: white;
+    color: white;
+}
+
+.barcha-theme {
+    background: linear-gradient(135deg, red 0%, #CC0000 100%);
+    border-color: black;
+    color: yellow;
+}
+
+.ubers-theme {
+    background: linear-gradient(135deg, black 0%, #333 100%);
+    border-color: white;
+    color: white;
+}
+
+.manshine-theme {
+    background: linear-gradient(135deg, skyblue 0%, #4169E1 100%);
+    border-color: white;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .teams {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 200px; /* Slightly larger on mobile */
+    }
+}
