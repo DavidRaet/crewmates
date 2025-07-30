@@ -12,7 +12,8 @@ const Home = () => {
             <h1>
                 Blue Lock Creator
             </h1>
-            <p>
+            <img className="home-image" src="/images/home-image.jpg" alt="" />
+            <p className="home-desc">
                 Welcome to the Blue Lock Creator Page. Just like how characters
                 in Blue Lock were to choose their own team based on their quirks,
                 you can also choose your destiny by creating a set of characters 

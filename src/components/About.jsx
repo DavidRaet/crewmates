@@ -56,10 +56,10 @@ const About = () => {
             <h1>
                 About
             </h1>
-            <p>
+            <p className='about-desc'>
                 Here you will find the details regarding each teams 
-                whether its about their philosophy, team manager, or teammates, 
-                these descriptions should adequately suit how you would want to customize
+                philosophy, team manager, or teammates. 
+                These descriptions should adequately suit how you would want to customize
                 your own character according to whichever team's philosophy matches yours. 
             </p>
             </div>

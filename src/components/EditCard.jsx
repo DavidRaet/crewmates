@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../client';
-
+import './pageCSS/EditCard.css';
 const EditCard = () => {
     const {id} = useParams();
     const [character, setCharacter] = useState({name: "", number: "", position: "", team: ""});
-    const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate();
 
         const navigateToDashboard = () => {
@@ -23,7 +22,6 @@ const EditCard = () => {
                 if (data) {
                     setCharacter(data);
                 }
-                setIsLoading(false);
             }
             fetchCharacter();
         }, [id])
@@ -68,21 +66,40 @@ const EditCard = () => {
 
     return (
         <div className="edit-card">
-            <form>
+            <form className='form-container'>
+            <img className='isagi' src="/images/edit-image2.jpg" alt="" />
+            <h1>Edit your egoist...</h1>
             <div className="name-number-row">
-            <label htmlFor="name">Name</label>
+            <label className='name-label' htmlFor="name">Name</label>
             <input type="text" id='name' name='name'  value={character.name} onChange={handleChange} />
-            <label htmlFor="number">Number</label>
+            <label className='number-label' htmlFor="number">Number</label>
             <input type="text" id='number' name='number' value={character.number} onChange={handleChange} />
                 </div>
             <div className="char-team-info">
                 <label htmlFor="position">Position</label>
-                <input type="text" id='position' name='position' value={character.position} onChange={handleChange} />
+                <select name="position" id="position" onChange={handleChange} required>
+                    <option value="">Select a position...</option>
+                    <option value="Striker">Striker</option>
+                    <option value="Midfielder">Midfielder</option>
+                    <option value="Center Back">Center Back</option>
+                    <option value="Goalkeeper">Goalkeeper</option>
+                    <option value="Attacking Midfielder">Attacking Midfielder</option>
+                    <option value="Defensive Midfielder">Defensive Midfielder</option>
+                    <option value="Winger">Winger</option>
+                </select>
                 <label htmlFor="team">Team</label>
-                <input type="text" id='team' name='team' value={character.team} onChange={handleChange} />
+                <select name="team" id="team" onChange={handleChange} required>
+                    <option value="">Select a team...</option>
+                    <option value="Bastard Munchen">Bastard Munchen</option>
+                    <option value="PxG">PxG</option>
+                    <option value="FC Barcha">FC Barcha</option>
+                    <option value="Ubers">Ubers</option>
+                    <option value="Manshine City">Manshine City</option>
+                </select>
             </div>
-            <input type="submit" value="Submit" onClick={updatePost} />
+            <input className='submit-btn' type="submit" value="Submit" onClick={updatePost} />
             <button className='delete-btn' onClick={deletePost}>Delete</button>
+
             </form>
         </div>
     )

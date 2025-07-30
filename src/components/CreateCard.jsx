@@ -62,19 +62,20 @@ const CreateCard = () => {
     
     return (
         <div className="create-page">
+            <div className="form">
+            <img className="ego-photo" src="/images/ego.jpg" alt="photo of ego jinpachi" />
             <h1>
                 Create your Egoist...
             </h1>
-            <img className="ego-photo" src="/images/ego.jpg" alt="photo of ego jinpachi" />
             <form>
                 <div className="name-number-row">
-            <label htmlFor="name">Name</label>
+            <label className='name-label' htmlFor="name">Name</label>
             <input type="text" id='name' name='name' onChange={handleChange} />
-            <label htmlFor="number">Number</label>
+            <label className='number-label' htmlFor="number">Number</label>
             <input type="text" id='number' name='number' onChange={handleChange} />
                 </div>
             <div className="char-team-info">
-                <label htmlFor="position">Position</label>
+                <label className='position-label' htmlFor="position">Position</label>
                 <select name="position" id="position" onChange={handleChange} required>
                     <option value="">Select a position...</option>
                     <option value="Striker">Striker</option>
@@ -85,7 +86,7 @@ const CreateCard = () => {
                     <option value="Defensive Midfielder">Defensive Midfielder</option>
                     <option value="Winger">Winger</option>
                 </select>
-                <label htmlFor="team">Team</label>
+                <label className='team-label' htmlFor="team">Team</label>
                 <select name="team" id="team" onChange={handleChange} required>
                     <option value="">Select a team...</option>
                     <option value="Bastard Munchen">Bastard Munchen</option>
@@ -96,10 +97,11 @@ const CreateCard = () => {
                 </select>
             </div>
             <input type="submit" value="Submit" onClick={submitCharacter} />
+            </form>
+            </div>
             <p className="team-hint">
                 📖 Refer to the About section to understand each team's philosophy and find your fit
             </p>
-            </form>
         </div>
     )
 }

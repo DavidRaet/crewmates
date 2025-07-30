@@ -1,0 +1,28 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.isagi {
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+label {
+    padding-right: 0.6rem;
+}
+
+.team-label, .number-label {
+    padding-left: 0.6rem;
+}
+
+.submit-btn {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}

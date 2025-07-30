@@ -23,7 +23,7 @@ const Card = ({name, number, position, team, id}) => {
         <div className={`card ${teamClassMap(team)}`}>
             <div className="card-content">
                 <div className="card-header">
-                    <h1 title={name}>{name}</h1> {/* Title shows full name on hover */}
+                    <h1  title={name}>{name}</h1> 
                 </div>
                 
                 <div className="card-info">
