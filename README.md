@@ -38,10 +38,8 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-
-<img src='https://i.imgur.com/8uaLoAh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+Unfortunately img src doesn't load on the README file; please refer to: https://imgur.com/gallery/blue-lock-tLdEHAU
+I apologize for the inconvenience.
 
 ## Notes
 
