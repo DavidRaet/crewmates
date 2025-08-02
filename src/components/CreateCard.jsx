@@ -11,6 +11,8 @@ const CreateCard = () => {
     const navigateToDashboard = () => {
         navigate('/dashboard');
     }
+
+
     const submitCharacter = async (event) => {
         event.preventDefault();
         
